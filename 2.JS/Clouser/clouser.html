@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="green">green</button>
+
+    <script>
+      let btnarray = [
+        "green",
+        "pink",
+        "black",
+        "yellow",
+        "white",
+        "orange",
+        "red",
+        "brown",
+        "gray",
+        "blue",
+        "fushia",
+        "whitesmoke",
+        "purple",
+        "cyan",
+        "skyblue",
+      ];
+      for (let i = 0; i < 14; i++) {
+        let btn = document.createElement("button");
+        btn.innerText = `${btnarray[i]}`;
+        btn.className = `${btnarray[i]}`;
+        document.body.appendChild(btn);
+      }
+      function handler(bgcolor) {
+        return function () {
+          document.body.style.backgroundColor = bgcolor;
+          console.log(bgcolor);
+        };
+      }
+      console.log(handler("pink"));
+
+      for (let i = 0; i < 14; i++) {
+        console.log(document.querySelector(`.${btnarray}`));
+        document.querySelector(`.${btnarray[i]}`).onclick = handler(
+          `${btnarray[i]}`
+        ); // Assign the function to the onclick event
+      }
+    </script>
+  </body>
+</html>

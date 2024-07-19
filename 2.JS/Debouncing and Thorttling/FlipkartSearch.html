@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" onkeypress="Better()" />
+    <script>
+      let count = 0;
+      function GetData() {
+        console.log("Fetching data ", count++);
+      }
+      function Debouncing(call, dealay) {
+        let timer;
+        return function () {
+          if (timer) clearTimeout(timer);
+          timer = setTimeout(() => {
+            call();
+          }, dealay);
+        };
+      }
+      const Better = Debouncing(GetData, 300);
+    </script>
+  </body>
+</html>

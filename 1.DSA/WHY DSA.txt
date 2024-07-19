@@ -1,0 +1,75 @@
+-> Data structure is the way of storing the data in the efficient ways.
+-> why structuring the data because we want to perform operation on the data like searching ,
+ sorting efficient.
+-> if the data is not structure then  you cant perform algorithm .
+-> the way of using algorithm to store the data .
+
+**  Type of dsa **
+->Linear DS : - where the data store in the linear method , and the memory is in the linear format. like array
+->Non Linear DS : -where the data is not in linear format and the data is not store in the one by one in the memory . liek graph and tree
+
+** Sapace and time complexity **
+time complexity : time taken by the code to excute a particular task as function of length of input.
+space complexity :- additional time taken by the code  to excute the particular task.as function of length of input.
+
+** types **
+1.big-0 : worst case (mostly use)
+2. theta : avg
+3. omega: lowest 
+
+** big o types **
+1. Constant - O(1) 
+2. Linear -O(n)
+3 Log - O(log n)
+4 Quard - O(n^2)
+5 cubic - O(n^3)
+
+** constant time /space complecity **
+O(1) :constant time  input size not matter . in time.
+       example  if we want to print first element of the array
+     : constant size 
+       example if  we want to  store a number integer  it always take 4 byte ❤️
+
+** Linear time complexity **
+O(n) time taken : it take the linear time always 
+     example if you want to print the element of array if it has n element : space complecity must br 1 of this code
+
+    sapce complecity: linear space
+    example copy the element of array into another array
+
+** log complecity **
+O(log n)
+time complecity  : it take logn time where the time complecity decrease 
+   divide and concoure technique, binary search technique
+
+space complecity
+    binary search take logn n time because it use recusive approch
+
+
+** Quardradic time **
+time complecity : worst time complecity
+
+
+
+*****************************************************************************
+
+Number syatem : Binary decimal, binary,hexadecimal, octal
+// conversion  binary to decimal %,/
+//conversion from binary to decimal
+
+*****************************************************************************
+
+bitwise operator
+AND - &        3 & 4  011&100=0
+OR- |          3 | 4  111
+Not ~          ~5  -6
+XOR ^          5 ^ 6  : 3
+
+
+
+                
+    
+
+
+   
+

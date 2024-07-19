@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: cursive;
+    }
+    .st {
+      background-color: white;
+      padding: 10px;
+      font-size: 30px;
+    }
+    img {
+      height: 100px;
+      width: 100px;
+
+      border-radius: 100%;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h3>Hello</h3>
+      <img
+        src="https://images.pexels.com/photos/887349/pexels-photo-887349.jpeg"
+        alt=""
+      />
+    </div>
+    <script>
+      let content = document.querySelector("h3");
+      let body = document.querySelector("body");
+      function randomcolor() {
+        let c1 = Math.floor(Math.random() * 255);
+        let c2 = Math.floor(Math.random() * 255);
+        let c3 = Math.floor(Math.random() * 255);
+        return `rgb(${c1},${c2},${c3})`;
+      }
+      let love = ["Hello", "Daddy", "❤️", "fuck You"];
+      let img = document.querySelector("img");
+      let imgsrc = [
+        "https://images.pexels.com/photos/8230999/pexels-photo-8230999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/7155673/pexels-photo-7155673.jpeg?auto=compress&cs=tinysrgb&w=600",
+
+        "https://images.pexels.com/photos/5915441/pexels-photo-5915441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "https://images.pexels.com/photos/4629628/pexels-photo-4629628.jpeg?auto=compress&cs=tinysrgb&w=600",
+      ];
+      let index = 0;
+      let lengthlove = 4;
+      setInterval(() => {
+        if (index < lengthlove) {
+          content.innerText = love[index];
+          content.style.background = "white";
+          content.classList.add("st");
+          fetch(imgsrc[index]).then(() => {
+            img.src = Response();
+          });
+          index++;
+        } else {
+          index = 0;
+        }
+
+        body.style.background = randomcolor();
+      }, 800);
+    </script>
+  </body>
+</html>

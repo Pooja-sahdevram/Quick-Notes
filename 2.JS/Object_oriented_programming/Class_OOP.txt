@@ -1,0 +1,22 @@
+//JS is a prototype basesd language not functional and object oriented.
+//IN js there is no classes in js before and noy now .
+// the classes are syntatic sugar over existing prototype based inheritance mechnisum.
+//oops is a programming paradigms 
+
+##java features can be used in the js now by the help of oops 
+Parts of OOP:-
+1.Object literal
+2.constructor fxn
+3. prototype
+4. Instances -->New keyword, this keyword
+
+
+//object literal -> property and methods
+//Constructor function => from one object to make multiple Instances;
+//it give new copy user this 
+
+
+//new
+->1. when you write nrw then new object created
+->2. a contsructor fucntion call using new keyword
+->3. this keyword insject in this fxn.

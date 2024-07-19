@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="input" style="display: block" />
+    <label for=""> default :</label>
+    <span class="p"></span>
+    <br />
+    <label for=""> Debouncing :</label>
+    <span class="p1"></span>
+    <br />
+    <label for=""> thortling :</label>
+    <span class="p2"></span>
+  </body>
+  <script>
+    const input = document.getElementById("input");
+    const deagult = document.querySelector(".p");
+    const p1 = document.querySelector(".p1");
+    const p2 = document.querySelector(".p2");
+    input.addEventListener("input", (e) => {
+      deagult.textContent = e.target.value;
+
+      newFxn(e.target.value);
+      nsxtfxn(e.target.value);
+    });
+    let count = 0;
+
+    function call(text) {
+      //set p1
+      p1.textContent = text;
+      console.log("call", count++);
+    }
+    const Deboucinghandler = () => {
+      let timer;
+      return function (...args) {
+        if (timer) clearTimeout(timer);
+
+        timer = setTimeout(() => {
+          call(...args);
+        }, 300);
+      };
+    };
+    const newFxn = Deboucinghandler();
+
+    //thottling
+
+    function call2(text) {
+      //set p1
+      p2.textContent = text;
+      console.log("call2", count++);
+    }
+    function thortling() {
+      let shouldwait = false;
+      return function (...args) {
+        if (shouldwait) {
+          return;
+        }
+
+        call2(...args);
+        shouldwait = true;
+        setTimeout(() => {
+          shouldwait = false;
+        }, 1000);
+      };
+    }
+
+    let nsxtfxn = thortling(call2);
+  </script>
+</html>
